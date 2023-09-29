@@ -1,0 +1,39 @@
+.contacts
+  display flex
+  justify-content center
+  width 100%
+  padding 0 0 0 20px
+  .contacts__wrp
+    display: flex
+    justify-content space-between
+    width 100%
+    max-width 1440px
+    .contacts__text
+      display flex
+      flex-direction column
+      justify-content center
+      max-width 450px
+      h2
+        font-weight 500
+        font-size 36px
+        line-height 44px
+        letter-spacing 0.01em
+        font-variant small-caps
+        color #87579d
+        margin-bottom 40px
+      a
+        &:hover
+          text-decoration underline
+      a, p
+        font-weight 500
+        font-size 20px
+        line-height 24px
+        letter-spacing 0.01em
+        font-variant small-caps
+        color #87579d
+      p
+        margin-top 30px
+@media (max-width 700px)
+  .contacts
+    .contacts__wrp
+      flex-direction column

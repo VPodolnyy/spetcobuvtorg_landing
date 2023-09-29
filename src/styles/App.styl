@@ -1,0 +1,362 @@
+//how many images we have
+$slides: 3
+
+// how much we want each slide to show
+$time_per_slide: 4
+
+// total time needed for full animation
+$total_animation_time: $time_per_slide * $slides
+
+.App
+  display flex
+  justify-content center
+  flex-direction column
+  align-items center
+  padding-top 66px
+  .welcome
+    display flex
+    justify-content space-between
+    align-items center
+    min-height 50vh
+    width 100%
+    max-width 1440px
+    .welcome__info
+      display flex
+      flex-direction column
+      justify-content center
+      max-width 50%
+      h1
+        font-weight 800
+        font-size 48px
+        line-height 59px
+        text-transform uppercase
+        color #48494E
+        span
+          color #87579d
+    .welcome__foto
+      position relative
+      overflow hidden
+      img
+        width 100%
+      .photo__first, .photo__second, .photo__third
+        animation round 5s infinite;
+        opacity 0
+      .photo__first
+        animation-delay 0s
+      .photo__second
+        position absolute
+        animation-delay 4s
+      .photo__third
+        position absolute
+        animation-delay 8s
+        opacity 1
+      @keyframes round
+        10%
+          opacity 0
+        70%
+          opacity 1
+  .benefits
+    display flex
+    justify-content center
+    width 100%
+    background-color #87579d
+    padding 0 20px
+    ul
+      width 100%
+      max-width 1440px
+      display flex
+      justify-content space-between
+      font-weight 500
+      font-size 18px
+      line-height 22px
+      text-transform uppercase
+      color white
+      li
+        display flex
+        align-items center
+        padding 38px 0
+        gap 12px
+  .products
+    display flex
+    max-width 1440px
+    width 100%
+    justify-content center
+    margin 100px 0
+    padding 0 20px
+    .products__wrp
+      display: flex
+      flex-direction: column
+      width 100%
+      h2
+        margin-bottom 38px
+        font-weight 500
+        font-size 36px
+        line-height 44px
+        letter-spacing 0.01em
+        text-transform uppercase
+        color #48494E
+      .products__col
+        display flex
+        justify-content flex-start
+        flex-wrap wrap
+        gap 20px
+      .productsAll
+        display flex
+        width 100%
+        justify-content center
+        margin-top 50px
+        button
+          width 100%
+          max-width 440px 
+          background-color #87579d
+          color white
+          border none
+          border-radius 13px
+          padding 17px 0
+          margin-top 47px
+          text-align center
+          text-transform uppercase
+          font-weight 800
+          font-size 18px
+          line-height 22px
+  .consultation
+    display flex
+    width 100%
+    padding 0 20px
+    justify-content center
+    background-color #87579d
+    .consultation__wrp
+      display flex
+      justify-content space-between
+      max-width 1440px
+      width 100%
+      padding 50px 0
+      .consultation__text
+        display flex
+        flex-direction column
+        justify-content center
+        max-width 600px
+        gap 15px
+        h2
+          font-weight 500
+          font-size 36px
+          line-height 44px
+          letter-spacing 0.01em
+          font-variant small-caps
+          color #FFFFFF
+        p
+          font-weight 500
+          font-size 18px
+          line-height 22px
+          letter-spacing 0.01em
+          font-variant small-caps
+          color #FFFFFF
+      .consultation__button
+        display flex
+        align-items center
+        width 100%
+        max-width 440px 
+        button
+          width 440px
+          background-color white
+          color #87579d
+          border none
+          border-radius 13px
+          padding 17px 0
+          margin-top 47px
+          text-align center
+          text-transform uppercase
+          font-weight 800
+          font-size 18px
+          line-height 22px
+          cursor pointer
+  .company
+    display flex
+    width 100%
+    flex-direction column
+    justify-content center
+    margin 100px 0
+    padding 0 20px
+    gap 20px
+  .backdropModal
+    position absolute
+    height 100%
+    width 100%
+    background rgba(0,0,0,0.35)
+    z-index 1000
+    .modal
+      position fixed
+      left 0
+      right 0
+      bottom 0
+      top 0
+      overflow hidden
+      margin auto
+      height 470px
+      width 95%
+      max-width 450px
+      background white
+      border-radius 15px
+      display flex
+      flex-direction column
+      gap 20px
+      box-shadow 0px 2px 10px 0px rgba(0, 0, 0, 0.25)
+      h3
+        display flex
+        align-items center
+        justify-content center
+        height 15%
+        background-color #87579D
+        color #ffffff
+        font-size 24px
+        font-weight 600
+        line-height 20px
+      .form
+        display flex
+        flex 1
+        flex-direction column
+        justify-content space-between
+        padding 0 20px 20px 20px
+        p
+          font-size 14px
+          font-weight 500
+          line-height 16px
+        .inputBox
+          position relative
+          input[type='text'], input[type='tel'], input[type='email']
+            height 40px
+            border-bottom 1.5px solid #ACACAC
+            width 100%
+            padding 11px
+            &::placeholder
+              color transparent
+            &:focus
+              border 1.5px solid #87579D !important
+              border-radius 5px
+              &::placeholder
+                color #ACACAC
+            &:focus + label
+              font-size 13px
+              color #87579D !important
+              padding 0 6px
+              transform translateX(10px) translateY(-19px)
+              border-right 1.5px solid #87579d !important
+              border-left 1.5px solid #87579d !important
+            &.filled
+              border 1.5px solid #ACACAC
+              border-radius 5px
+            &.filled + label
+              font-size 13px
+              color #ACACAC
+              padding 0 6px
+              transform translateX(10px) translateY(-19px)
+              border-right 1.5px solid #ACACAC
+              border-left 1.5px solid #ACACAC
+            &.error
+              border 1.5px solid red !important
+              border-radius 5px
+            &.error + label
+              font-size 13px
+              color red !important
+              padding 0 6px
+              transform translateX(10px) translateY(-19px)
+              border-right 1.5px solid red !important
+              border-left 1.5px solid red !important
+          label
+            position absolute
+            left 0
+            margin 11px
+            transition 0.2s
+            font-size 14px
+            color #ACACAC
+            background white
+            font-weight 500
+            pointer-events none
+        .inputCheckbox
+          display flex
+          align-items center
+          gap 7px
+          padding 11px
+          input + label
+            cursor pointer
+            flex-shrink 0
+            width 24px
+            height 24px
+            margin-right 8px
+            display block
+            border-radius 3px
+            border 2px solid #87579D
+            background-image url(../assets/images/checked_white.svg)
+            background-size cover
+            transition background-color .2s
+          input
+            &:checked + label
+              background-color #87579D
+          p
+            pointer-events none
+        button
+          background #87579D
+          color #ffffff
+          font-size 14px
+          font-weight 500
+          padding 10px 0
+          border-radius 10px
+          border 2px solid #87579D
+          &:hover
+            opacity 0.9
+          &:active
+            background white
+            color #87579D
+    .consultation
+      .consultation__wrp
+        .consultation__text
+          h2
+            font-size 30px
+            line-height 34px
+          p
+            font-size 16px
+            line-height 20px
+        .consultation__button
+          max-width 320px
+@media (max-width: 1000px)
+  .App
+    .benefits
+      ul
+        font-size 16px
+        li
+          img
+            width 36px
+            height 36px
+@media (max-width: 1000px)
+  .App
+    .welcome
+      margin-top 30px
+      gap 30px
+      flex-direction column
+      .welcome__info
+        max-width 90%
+      .welcome__foto
+        max-width 70%
+@media (max-width: 700px)
+  .App
+    .welcome
+      margin-bottom 30px
+      .welcome__info
+        h1
+          font-size 28px
+          line-height 34px
+    .benefits
+      ul
+        flex-direction column
+        font-size 14px
+        li
+          img
+            width 30px
+            height 30px
+    .products
+      .products__wrp
+        .products__col
+          justify-content center
+    .consultation
+      .consultation__wrp
+        flex-direction column

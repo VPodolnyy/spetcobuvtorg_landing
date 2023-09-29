@@ -1,0 +1,196 @@
+.CardBox
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  gap 20px
+  .SmallCard
+    display flex
+    width 100%
+    width 300px
+    height 400px
+    flex-direction column
+    border-radius 10px
+    border 2px solid #F1F1F1
+    overflow hidden
+    transition all .3s
+    cursor pointer
+    &:hover
+      border 2px solid #87579D
+      box-shadow 0 5px 5px -5px rgba(0, 0, 0, .5)
+      .imgBox
+        .circle, svg
+          display block
+    .imgBox
+      position relative
+      display flex
+      justify-content center
+      align-items center
+      height 300px
+      .circle
+        display none
+        position: absolute
+        top -40px
+        right -40px
+        padding 10px
+        border 1.5px solid #87579D
+        border-radius 100%
+        width 80px
+        height 80px
+      svg
+        display none
+        position absolute
+        top 5px
+        right 5px
+      img
+        scale 0.5
+    .Info
+      position relative
+      height 100px
+      padding 10px
+      background-color #F8F8F8
+      color #48494E
+      h3
+        font-size 14px
+        font-weight 600
+      button
+        position absolute
+        bottom 10px
+        right 15px
+        color #87579D
+        border none
+        background transparent
+        font-size 14px
+        font-weight 600
+        cursor pointer
+        &:hover
+          text-decoration underline
+  .CardBackdrop
+    position fixed
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 1001
+    background rgba(0, 0, 0, 0.25)
+    display flex
+    justify-content center
+    align-items center
+    .Card
+      position relative
+      display flex
+      gap 20px
+      justify-content space-evenly
+      max-width 900px
+      max-height 80%
+      margin 0 40px
+      padding 40px 15px
+      background white
+      border-radius 10px
+      .close
+        position absolute
+        right 7px
+        top 7px
+      .line
+        width 2px
+        background #87579D
+      .col1
+        position relative
+        display flex
+        flex-direction column
+        align-items center
+        gap 15px
+        overflow-y auto
+        &::-webkit-scrollbar
+          width 4px
+        &::-webkit-scrollbar-track
+          background-color rgba(0,0,0,0.05) !important
+        &::-webkit-scrollbar-thumb
+          background-color #87579D
+          border-radius 6px
+        .shoes
+          max-height 60%
+          max-width 60%
+          cursor zoom-in
+        .features__Box
+          display flex
+          flex-direction column
+          gap 5px
+          width 100%
+          h4
+            text-align center
+            margin 15px 0 5px 0
+          .feature
+            display flex
+            align-items center
+            gap 7px
+            font-weight 500
+      .col2
+        max-width 59%
+        overflow-y auto
+        &::-webkit-scrollbar
+          width 4px
+        &::-webkit-scrollbar-track
+          background-color rgba(0,0,0,0.05) !important
+        &::-webkit-scrollbar-thumb
+          background-color #87579D
+          border-radius 6px
+        h4
+          font-size 16px
+          text-align center
+          margin-bottom 10px
+        p
+          span
+            font-weight 600
+        .description
+          margin-top 10px
+      .fullImg__Backdrop
+        position fixed
+        top 0
+        bottom 0
+        left 0
+        right 0
+        display flex
+        justify-content center
+        align-items center
+        background rgba(0,0,0,0.6)
+        .fullImg__Box
+          height 60%
+          width 60%
+          background #fff
+          border-radius 10px
+          display flex
+          justify-content center
+          align-items center
+          cursor zoom-out
+          .fullImg
+             scale 1
+             border-radius 10px
+@media (max-width: 750px)
+  .CardBox
+    .CardBackdrop
+      .Card
+        flex-direction column-reverse
+        align-items center
+        margin 0 20px
+        .col2
+          max-width initial
+          height 70%
+          img
+            height 100%
+        .line
+          height 2px
+          width 100%
+@media (max-width: 600px)
+  .CardBox
+    .CardBackdrop
+      .Card
+        position absolute
+        bottom -10px
+        max-height 90%
+        height 100%
+        max-width 95%
+        margin 0 10px
+        .col1
+          height 30%
+          .shoes
+            max-height 100%

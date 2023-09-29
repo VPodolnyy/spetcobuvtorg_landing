@@ -1,0 +1,39 @@
+header
+  width 100%
+  display flex
+  justify-content center
+  background #fff
+  position fixed
+  z-index 1000
+  top 0
+  border-bottom 2px solid #87579D
+  .container
+    width 100%
+    max-width 1440px
+    display flex
+    align-items center
+    justify-content space-between
+    padding 12px 0
+    margin 0 10px
+    nav
+      display flex
+      gap 50px
+      font-weight 500
+      font-size 16px
+      line-height 20px
+      @media (max-width 700px)
+        position absolute
+        flex-direction column
+        top 66px
+        background white
+        height 100vh
+        left 100%
+        width 100%
+        padding 20px
+        transition left .3s ease-in-out
+        &.open
+          left 0%
+    svg
+      display none
+      @media (max-width 700px)
+        display flex

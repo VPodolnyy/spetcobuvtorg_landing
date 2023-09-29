@@ -1,0 +1,72 @@
+.reviews
+  display flex
+  width 100%
+  justify-content center
+  background-color #323236
+  border 2px solid #87579D
+  padding 0 20px
+  .reviews__wrp
+    display flex
+    flex-direction: column
+    align-items: center
+    max-width 1440px
+    width 100%
+    padding 35px 0 75px
+    h2
+      font-weight 500
+      font-size 36px
+      line-height 44px
+      letter-spacing 0.01em
+      font-variant small-caps
+      color #FFFFFF
+      margin-bottom 60px
+    .reviews__container
+      width 100%
+      display flex
+      justify-content space-between
+      .reviews__card
+        display flex
+        flex-direction column
+        gap 20px
+        max-width 45%
+        background rgba(255, 255, 255, 0.05)
+        border 2px solid #87579D
+        border-radius 13px
+        padding 50px 30px
+        .reviews__text
+          font-size 14px
+          line-height 17px
+          letter-spacing 0.01em
+          font-variant small-caps
+          color rgba(255, 255, 255, 0.7)
+        .reviews__info
+          display flex
+          gap 20px
+          align-items center
+          hr
+            height 100%
+            color #87579d
+            background-color #87579d
+            width 2px
+            border none
+        .reviews__info__user
+          font-weight 500
+          font-size 14px
+          line-height 17px
+          letter-spacing: 0.01em
+          font-variant small-caps
+          p
+            color white
+          span
+            color #87579d
+@media (max-width 700px)
+  .reviews
+    .reviews__wrp
+      h2
+        margin-bottom 30px
+      .reviews__container
+        flex-direction column
+        gap 24px
+        .reviews__card
+          width 100%
+          max-width none
