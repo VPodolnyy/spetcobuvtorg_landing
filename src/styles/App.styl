@@ -30,9 +30,12 @@ $total_animation_time: $time_per_slide * $slides
         font-size 48px
         line-height 59px
         text-transform uppercase
-        color #48494E
+        color #231F20
         span
-          color #87579d
+          color #EC901C
+      h4
+        font-size 20px
+        font-weight 500
     .welcome__foto
       position relative
       overflow hidden
@@ -45,10 +48,10 @@ $total_animation_time: $time_per_slide * $slides
         animation-delay 0s
       .photo__second
         position absolute
-        animation-delay 4s
+        animation-delay 5s
       .photo__third
         position absolute
-        animation-delay 8s
+        animation-delay 10s
         opacity 1
       @keyframes round
         10%
@@ -59,7 +62,7 @@ $total_animation_time: $time_per_slide * $slides
     display flex
     justify-content center
     width 100%
-    background-color #87579d
+    background-color #EC901C
     padding 0 20px
     ul
       width 100%
@@ -94,7 +97,7 @@ $total_animation_time: $time_per_slide * $slides
         line-height 44px
         letter-spacing 0.01em
         text-transform uppercase
-        color #48494E
+        color #231F20
       .products__col
         display flex
         justify-content flex-start
@@ -108,7 +111,7 @@ $total_animation_time: $time_per_slide * $slides
         button
           width 100%
           max-width 440px 
-          background-color #87579d
+          background-color #EC901C
           color white
           border none
           border-radius 13px
@@ -124,7 +127,7 @@ $total_animation_time: $time_per_slide * $slides
     width 100%
     padding 0 20px
     justify-content center
-    background-color #87579d
+    background-color #EC901C
     .consultation__wrp
       display flex
       justify-content space-between
@@ -159,7 +162,7 @@ $total_animation_time: $time_per_slide * $slides
         button
           width 440px
           background-color white
-          color #87579d
+          color #EC901C
           border none
           border-radius 13px
           padding 17px 0
@@ -206,10 +209,10 @@ $total_animation_time: $time_per_slide * $slides
         align-items center
         justify-content center
         height 15%
-        background-color #87579D
+        background-color #EC901C
         color #ffffff
         font-size 24px
-        font-weight 600
+        font-weight 500
         line-height 20px
       .form
         display flex
@@ -231,17 +234,17 @@ $total_animation_time: $time_per_slide * $slides
             &::placeholder
               color transparent
             &:focus
-              border 1.5px solid #87579D !important
+              border 1.5px solid #EC901C !important
               border-radius 5px
               &::placeholder
                 color #ACACAC
             &:focus + label
               font-size 13px
-              color #87579D !important
+              color #EC901C !important
               padding 0 6px
               transform translateX(10px) translateY(-19px)
-              border-right 1.5px solid #87579d !important
-              border-left 1.5px solid #87579d !important
+              border-right 1.5px solid #EC901C !important
+              border-left 1.5px solid #EC901C !important
             &.filled
               border 1.5px solid #ACACAC
               border-radius 5px
@@ -285,28 +288,28 @@ $total_animation_time: $time_per_slide * $slides
             margin-right 8px
             display block
             border-radius 3px
-            border 2px solid #87579D
+            border 2px solid #EC901C
             background-image url(../assets/images/checked_white.svg)
             background-size cover
             transition background-color .2s
           input
             &:checked + label
-              background-color #87579D
+              background-color #EC901C
           p
             pointer-events none
         button
-          background #87579D
+          background #EC901C
           color #ffffff
           font-size 14px
           font-weight 500
           padding 10px 0
           border-radius 10px
-          border 2px solid #87579D
+          border 2px solid #EC901C
           &:hover
             opacity 0.9
           &:active
             background white
-            color #87579D
+            color #EC901C
     .consultation
       .consultation__wrp
         .consultation__text
@@ -345,6 +348,8 @@ $total_animation_time: $time_per_slide * $slides
         h1
           font-size 28px
           line-height 34px
+        h4
+          font-size 16px
     .benefits
       ul
         flex-direction column

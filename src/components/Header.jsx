@@ -7,7 +7,9 @@ function Header() {
   return (
     <header>
       <div className='container'>
-        <img src={logoCompany} alt="СпецОбувьТорг" />
+        <div>
+          <img src={logoCompany} alt="СпецОбувьТорг" />
+        </div>
         <nav style={toggleMenu ? {left: '0%'} : {left: '100%'}}>
           <a onClick={() => {setToggleMenu(false)}} href="#Home">Главная</a>
           <a onClick={() => {setToggleMenu(false)}} href="#Products">Продукция</a>

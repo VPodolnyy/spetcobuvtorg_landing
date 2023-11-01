@@ -6,21 +6,32 @@ header
   position fixed
   z-index 1000
   top 0
-  border-bottom 2px solid #87579D
+  border-bottom 2px solid #EC901C
   .container
     width 100%
     max-width 1440px
     display flex
-    align-items center
+    // align-items center
     justify-content space-between
-    padding 12px 0
+    padding 15px 0
     margin 0 10px
+    img
+      position absolute
     nav
       display flex
       gap 50px
       font-weight 500
-      font-size 16px
+      font-size 18px
       line-height 20px
+      a
+        background-image: linear-gradient(#EC901C, #EC901C)
+        background-repeat no-repeat
+        background-position 0% 100%
+        background-size 0% 2px
+        transition all .3s
+        &:hover
+          background-size: 100% 2px
+          scale 1.05
       @media (max-width 700px)
         position absolute
         flex-direction column
