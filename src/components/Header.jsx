@@ -11,6 +11,7 @@ function Header() {
           <img src={logoCompany} alt="СпецОбувьТорг" />
         </div>
         <nav style={toggleMenu ? {left: '0%'} : {left: '100%'}}>
+          <a href="tel:+74955140050">+7 495 514-00-50</a>
           <a onClick={() => {setToggleMenu(false)}} href="#Home">Главная</a>
           <a onClick={() => {setToggleMenu(false)}} href="#Products">Продукция</a>
           <a onClick={() => {setToggleMenu(false)}} href="#Company">О нас</a>

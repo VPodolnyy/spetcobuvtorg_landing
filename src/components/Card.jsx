@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 const Card = props => {
   const { ref, isShow, setIsShow } = useOutsideAlerter(false)
   const [fullImg, setFullImg] = useState(false)
+  const [image, setImage] = useState(props.product.image[0])
 
   function setToggleCard (bool) {
     if (bool) {
@@ -41,7 +42,7 @@ const Card = props => {
     <div className='CardBox'>
       <div className='SmallCard'>
         <div className='imgBox' onClick={() => setToggleCard(true)}>
-          <img src={images('Products',props.product.image)} alt={props.product.name} />
+          <img src={images('Products', image)} alt={props.product.name} />
           <div className='circle'></div>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.7991 8.83737L10.9664 1.55805C10.8025 1.4228 10.5729 1.39411 10.3803 1.48428C10.1877 1.57445 10.0647 1.77119 10.0647 1.98432V5.82072C5.77745 5.97647 2.83048 7.48889 1.29756 10.3211C-0.0222296 12.7639 -0.00993339 15.6576 0.00236275 17.5717V18.0144C0.00236275 18.2644 0.17041 18.4857 0.416333 18.5513C0.461419 18.5636 0.510603 18.5677 0.555689 18.5677C0.752427 18.5677 0.936869 18.4652 1.03524 18.289C4.0273 13.014 6.49063 12.7598 10.0606 12.7475V16.5716C10.0606 16.7848 10.1836 16.9815 10.3803 17.0717C10.577 17.1619 10.8025 17.1332 10.9705 16.9979L19.7991 9.694C19.9262 9.58743 20 9.43168 20 9.26773C20 9.10379 19.9262 8.94394 19.7991 8.83737ZM11.1714 15.3953V12.1942C11.1714 12.0467 11.114 11.9073 11.0074 11.8048C10.9049 11.7024 10.7615 11.6409 10.618 11.6409C8.38833 11.6409 6.67917 11.7024 5.01919 12.477C3.58464 13.1451 2.34273 14.2805 1.11721 16.0634C1.1664 14.4362 1.37953 12.4934 2.26895 10.8498C3.67891 8.24306 6.40865 6.95196 10.618 6.91507C10.9213 6.91097 11.1673 6.66505 11.1673 6.36175V3.15655L18.5736 9.26773L11.1714 15.3953Z" fill="#EC901C"/>
@@ -65,7 +66,49 @@ const Card = props => {
                 props.product.features.find(el => el === 'MinPromTorg') &&
                 <img className='MinPromTorg' src={images('Features','MinPromTorg')} alt={'Одобрено Минпромторг'} />
               } */}
-              <img className='shoes' onClick={() => setFullImg(!fullImg)} src={images('Products',props.product.image)} alt={props.product.name} />
+              <img className='shoes' onClick={() => setFullImg(!fullImg)} src={images('Products', image)} alt={props.product.name} />
+              <div className='listImages'>
+                {
+                  props.product.image.map(img => {
+                    if (img === image) return
+                    return (
+                      <div className='microImg' key={img}>
+                        <img onClick={() => setImage(img)} src={images('Products', img)} alt={img} />
+                      </div>
+                    )
+                  })
+                }
+              </div>
+              <div className='characteristics'>
+                <h4>Характеристики</h4>
+                {
+                  props.product.properties.map(prop => {
+                    return(<p key={prop.name}><span>{prop.name}</span>{prop.text}</p>)
+                  })
+                }
+              </div>
+
+            </div>
+            <div className='line'></div>
+            <div className='col2'>
+              <h4>{props.product.name}</h4>
+              {/* <p className='description'>{props.product.description}</p> */}
+              <p dangerouslySetInnerHTML = {{ __html: props.product.description }} ></p>
+              {props.product.aspects &&
+                <div className='aspects'>
+                  <h4>Варианты исполнения</h4>
+                  {
+                    props.product.aspects.map(aspect => {
+                      return(
+                        <div key={aspect.name}>
+                          <span>- {aspect.name}: </span>
+                          <p>{aspect.description}</p>
+                        </div>
+                      )
+                    })
+                  }
+                </div>
+              }
               <div className='features__Box'>
                 <h4>Особенности</h4>
                 {
@@ -80,20 +123,10 @@ const Card = props => {
                 }
               </div>
             </div>
-            <div className='line'></div>
-            <div className='col2'>
-              <h4>{props.product.name}</h4>
-              {
-                props.product.properties.map(prop => {
-                  return(<p key={prop.name}><span>{prop.name}</span>{prop.text}</p>)
-                })
-              }
-              <p className='description'>{props.product.description}</p>
-            </div>
             {fullImg &&
               <div className='fullImg__Backdrop' onClick={() => setFullImg(!fullImg)}>
                 <div className='fullImg__Box'>
-                  <img className='fullImg' src={images('Products',props.product.image)} alt={props.product.name} />
+                  <img className='fullImg' src={images('Products', image)} alt={props.product.name} />
                 </div>
               </div>
             }

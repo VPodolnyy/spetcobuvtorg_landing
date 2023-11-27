@@ -42,7 +42,9 @@
         top 5px
         right 5px
       img
-        scale 0.5
+        max-width 90%
+        max-height 90%
+        border-radius 10px
     .Info
       position relative
       height 100px
@@ -110,20 +112,28 @@
         .shoes
           max-height 60%
           max-width 60%
+          border-radius 10px
           cursor zoom-in
-        .features__Box
+        .listImages
           display flex
-          flex-direction column
-          gap 5px
+          justify-content start
           width 100%
-          h4
-            text-align center
-            margin 15px 0 5px 0
-          .feature
-            display flex
-            align-items center
-            gap 7px
-            font-weight 500
+          gap 5px
+          .microImg
+            width 80px
+            height 80px
+            padding 6px
+            position relative
+            border 1.5px solid #EC901C
+            border-radius 10px
+            overflow hidden
+            cursor pointer
+            &:hover
+              box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.25)
+            img
+              width 100%
+              height 100%
+              object-fit contain
       .col2
         max-width 59%
         overflow-y auto
@@ -143,6 +153,24 @@
             font-weight 500
         .description
           margin-top 10px
+        .aspects
+          h4
+            margin 15px 0 5px 0
+          span
+            font-weight 500
+        .features__Box
+          display flex
+          flex-direction column
+          gap 5px
+          width 100%
+          h4
+            text-align center
+            margin 15px 0 5px 0
+          .feature
+            display flex
+            align-items center
+            gap 7px
+            font-weight 500
       .fullImg__Backdrop
         position fixed
         top 0
@@ -154,17 +182,22 @@
         align-items center
         background rgba(0,0,0,0.6)
         .fullImg__Box
-          height 60%
-          width 60%
+          height 70%
+          width 70%
           background #fff
           border-radius 10px
           display flex
           justify-content center
           align-items center
           cursor zoom-out
+          overflow hidden
           .fullImg
-             scale 1
-             border-radius 10px
+            max-width 90%
+            max-height 90%
+            border-radius 10px
+            // transition 1s
+            // &:hover
+            //   transform scale(3)
 @media (max-width: 750px)
   .CardBox
     .CardBackdrop

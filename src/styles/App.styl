@@ -88,7 +88,7 @@ $total_animation_time: $time_per_slide * $slides
     padding 0 20px
     .products__wrp
       display: flex
-      flex-direction: column
+      flex-direction column
       width 100%
       h2
         margin-bottom 38px
@@ -176,11 +176,57 @@ $total_animation_time: $time_per_slide * $slides
   .company
     display flex
     width 100%
-    flex-direction column
-    justify-content center
-    margin 100px 0
     padding 0 20px
-    gap 20px
+    justify-content center
+    .company__wrp
+      display flex
+      flex-direction column
+      justify-content space-between
+      max-width 1440px
+      width 100%
+      padding 50px 0
+      gap 20px
+  .documents
+    display flex
+    width 100%
+    padding 0 20px
+    justify-content center
+    .documents__wrp
+      display flex
+      flex-direction column
+      justify-content space-between
+      max-width 1440px
+      width 100%
+      padding 50px 0
+      gap 20px
+      .doc
+        position relative
+        height 250px
+        width 240px
+        padding-top 30px
+        border 2px solid #EC901C
+        border-radius 10px
+        display flex
+        flex-direction column
+        justify-content space-between
+        align-items center
+        box-shadow 0 5px 5px -5px rgba(0, 0, 0, .5)
+        a
+          position absolute
+          top 0
+          width 100%
+          height 100%
+          cursor pointer
+        h4
+          display flex
+          align-items center
+          text-align left
+          height 30%
+          width 100%
+          background-color #EC901C
+          color white
+          padding 10px
+          font-weight 500
   .backdropModal
     position absolute
     height 100%
