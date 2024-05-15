@@ -1,0 +1,102 @@
+.slide
+  position relative
+  display flex !important
+  flex-direction column
+  // justify-content center
+  align-items center
+  cursor pointer
+  &:hover
+    img
+      scale 1.2
+    .background
+      width 100%
+      height 100%
+      border-radius 10px
+  img
+    padding 20px
+    width 300px
+    transform scaleX(-1)
+    scale 1
+    transition scale .3s
+  .background
+    top 0
+    bottom 0
+    left 0
+    right 0
+    width 200px
+    height 200px
+    margin auto
+    position absolute
+    border-radius 300px
+    z-index -1
+    transition all .3s
+    opacity 0.7
+  h5
+    font-size 28px
+    font-weight 400
+.ConfidenceSlider
+  .confidence__item
+    height 200px
+    border 1px solid rgba(255, 255, 255, 0.2)
+    padding 20px
+    display flex !important
+    flex-direction column
+    justify-content space-around
+    align-items center
+    h5
+      text-align center
+      font-size 18px
+      font-weight 400
+    .confidence__item-img
+      width 200px
+      height 100px
+    // img
+    //   width 100%
+    //   min-height 60px
+
+.companySlider
+  padding 20px
+  .company__item
+    position relative
+    height 500px
+    .company__item-textBox
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      margin auto
+      display flex
+      justify-content center
+      align-items center
+      width 80%
+      height 70%
+      padding 30px
+      color white
+      font-size 20px
+      font-weight 500
+      background-color rgba(0, 0, 0, 0.7)
+    &.backImg1
+      background-image url(../assets/images/Slider/company1.webp)
+    &.backImg2
+      background-image url(../assets/images/Slider/company2.webp)
+    &.backImg3
+      background-image url(../assets/images/Slider/company3.webp)
+    &.backImg4
+      background-image url(../assets/images/Slider/company4.webp)
+
+@media (max-width 700px)
+  .slide
+    img
+      width 250px
+  .companySlider
+    padding 0
+    .slick-arrow
+      display none !important
+    .company__item
+      .company__item-textBox
+        width 80%
+        height 90%
+        padding 20px
+        font-size 15px
+        font-weight 400

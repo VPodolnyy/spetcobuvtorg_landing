@@ -12,14 +12,193 @@ $total_animation_time: $time_per_slide * $slides
   justify-content center
   flex-direction column
   align-items center
-  padding-top 66px
+  width 100%
+  // padding-top 26px
+  h2
+    &.header-section
+      position relative
+      font-size 32px
+      margin-bottom 20px
+      font-family RonduitCapitals
+      &:after
+        content ''
+        width 60px
+        height 4px
+        position absolute
+        bottom -10px
+        left 0
+        background-color #EC901C
+  p
+    &.description-section
+      font-size 16px
+      font-weight 450
+  .firstWindow
+    display: flex;
+    justify-content: center;
+    height 80vh
+    width 100%
+    // background: radial-gradient(circle, #fcba2d 0%, #ec901c 75%)
+    // background: linear-gradient(#EC901C, #EC901C)
+    // background rgba(236, 144, 28, 0.05)
+    background white
+    // padding-top 100px
+    .firstWindow__container
+      position relative
+      display flex
+      flex-direction column
+      justify-content center
+      width 100%
+      max-width 1040px
+      color #231F20
+      span
+        color #231F20
+        font-weight 600
+        font-size: 15px
+        // h1
+        //   font-size 48px
+      .heading 
+        position: relative
+        font-family: sans-serif
+        .heading__title
+          font-size 96px
+          font-weight 550
+          // color: #EC901C;
+          margin: 0;
+          position: relative;
+          z-index: 2;
+          // text-transform: uppercase
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px #EC901C
+        .heading__title--stroke
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px rgba(236, 144, 28, .25)
+          position: absolute
+          top: 30%
+          left: -5%
+          transform: translateY(-50%);
+      h2
+        font-size 26px
+        font-weight 800
+        line-height 50px
+        span
+          font-size 48px
+          color #EC901C
+      .firstWindow__imgBox
+        position absolute
+        right 2vw
+        max-height 70%
+        img
+          position relative
+          height 50vh
+          transform scaleX(-1)
+        .imgShadow
+          position absolute
+          bottom 0%
+          left 0
+          right 0
+          margin 0 auto
+          width 50%
+          height 0px
+          box-shadow 1px 40px 37px 17px #000
+      .firstWindow__application
+        margin-top 50px
+        p
+          font-size 16px
+        .inputBox
+          position relative
+          max-width 400px
+          display flex
+          padding 10px 15px 10px 0
+          gap 10px
+          margin-top 10px
+          input[type='text'], input[type='tel'], input[type='email']
+            height 40px
+            border-bottom 1.5px solid #ACACAC
+            width 100%
+            padding 11px
+            &::placeholder
+              color transparent
+            &:focus
+              border 1.5px solid #EC901C !important
+              border-radius 5px
+              &::placeholder
+                color #ACACAC
+            &:focus + label
+              font-size 13px
+              color #EC901C !important
+              padding 0 6px
+              transform translateX(10px) translateY(-19px)
+              border-right 1.5px solid #EC901C !important
+              border-left 1.5px solid #EC901C !important
+            &.filled
+              border 1.5px solid #ACACAC
+              border-radius 5px
+            &.filled + label
+              font-size 13px
+              color #ACACAC
+              padding 0 6px
+              transform translateX(10px) translateY(-19px)
+              border-right 1.5px solid #ACACAC
+              border-left 1.5px solid #ACACAC
+            &.error
+              border 1.5px solid red !important
+              border-radius 5px
+            &.error + label
+              font-size 13px
+              color red !important
+              padding 0 6px
+              transform translateX(10px) translateY(-19px)
+              border-right 1.5px solid red !important
+              border-left 1.5px solid red !important
+          label
+            position absolute
+            left 0
+            margin 11px
+            transition 0.2s
+            font-size 14px
+            color #ACACAC
+            background white
+            font-weight 500
+            pointer-events none
+          button
+            color white
+
+
+
+  .carousel-container
+    height 90vh
+    width 95vw
+    padding-top 200px
+    h1
+      margin-left 10%
+      font-family RonduitCapitals
+      font-weight 300
+      margin-bottom 50px
+    .slick-arrow
+      padding 10px
+      width 50px
+      height 100%
+      opacity 0.6
+      &:hover
+        background rgba(255, 255, 255, 0.2)
+    .slick-list
+      margin 0 40px
+      // height 300px
+      // transition height .3s ease-in-out
+      // @media (min-width: 768px)
+      //   height 450px
+      // @media (min-width: 1024px)
+      //   height 500px
+      // @media (min-width: 1440px)
+      //   height 650px
   .welcome
     display flex
     justify-content space-between
     align-items center
-    min-height 50vh
+    // min-height 50vh
     width 100%
-    max-width 1440px
+    max-width 1040px
+    padding: 50px 20px
     .welcome__info
       display flex
       flex-direction column
@@ -39,8 +218,10 @@ $total_animation_time: $time_per_slide * $slides
     .welcome__foto
       position relative
       overflow hidden
+      display flex
+      justify-content end
       img
-        width 100%
+        width 70%
       .photo__first, .photo__second, .photo__third
         animation round 5s infinite;
         opacity 0
@@ -62,11 +243,10 @@ $total_animation_time: $time_per_slide * $slides
     display flex
     justify-content center
     width 100%
-    background-color #EC901C
-    padding 0 20px
+    background radial-gradient(circle, rgba(252,186,45,1) 0%, rgba(236,144,28,1) 75%)
     ul
       width 100%
-      max-width 1440px
+      max-width 1040px
       display flex
       justify-content space-between
       font-weight 500
@@ -81,64 +261,152 @@ $total_animation_time: $time_per_slide * $slides
         gap 12px
   .products
     display flex
-    max-width 1440px
+    max-width 1040px
     width 100%
     justify-content center
-    margin 100px 0
-    padding 0 20px
+    border 1px solid rgba(255, 255, 255, 0.2)
+    border-top none
+    border-bottom none
+    // margin 100px 0
     .products__wrp
-      display: flex
-      flex-direction column
-      width 100%
-      h2
-        margin-bottom 38px
-        font-weight 500
-        font-size 36px
-        line-height 44px
-        letter-spacing 0.01em
-        text-transform uppercase
-        color #231F20
-      .products__col
+      margin-top 100px
+      .header-section
+        border 1px solid rgba(255, 255, 255, 0.2)
+        border-left none
+        border-right none
+        padding 20px
+        margin-bottom 0
+        &:after
+          bottom 10px
+          left 15px
+      .description-section
+        padding 30px 20px
+      .container-subGroup
         display flex
-        justify-content flex-start
-        flex-wrap wrap
-        gap 20px
-      .productsAll
-        display flex
-        width 100%
+        flex-direction column
         justify-content center
-        margin-top 50px
-        button
+        border-bottom 1px solid rgba(255, 255, 255, 0.2)
+        section
           width 100%
-          max-width 440px 
-          background-color #EC901C
-          color white
-          border none
-          border-radius 13px
-          padding 17px 0
-          margin-top 47px
-          text-align center
-          text-transform uppercase
-          font-weight 800
-          font-size 18px
-          line-height 22px
+          display flex
+          gap 50px
+          opacity 0
+          transform translateY(-100px)
+          transition transform 0.5s, opacity 0.5s
+          padding 30px 15px
+          margin-bottom 30px
+          &:first-child
+            border-top 1px solid rgba(255, 255, 255, 0.2)
+          &:not(:last-child)
+            border-bottom 1px solid rgba(255, 255, 255, 0.2)
+          &.revert
+            flex-direction row-reverse
+          .column
+            width 50%
+            &.img-box
+              background-size cover
+              background-repeat no-repeat
+              display flex
+              height 300px
+              justify-content center
+              border-radius 10px
+            &.text-box
+              display flex
+              flex-direction column
+              justify-content center
+              gap 20px
+              font-size 18px
+              padding-left 10px
+              h4
+                position relative
+                font-size 24px
+                font-family RonduitCapitals
+                &:after
+                  content ''
+                  width 50px
+                  height 3px
+                  position absolute
+                  bottom -5px
+                  left 0
+                  background-color #EC901C
+              a
+                max-width 150px
+                color white
+                padding 7px 15px
+                font-size 16px
+                border-radius 5px
+                text-align center
+                font-weight 500
+                background linear-gradient(90deg, rgba(252,212,45,1) 2%, rgba(236,144,28,1) 48%)
+                &:hover
+                  box-shadow 4px 2px 15px rgba(0,0,0,0.9)
+          img
+            height 100%
+  .advantages
+    width 100%
+    display flex
+    justify-content center
+    border 1px solid rgba(255, 255, 255, 0.2)
+    border-left none
+    border-right none
+    .advantages__container
+      width 100%
+      max-width 1040px
+      .advantages__block
+        display grid
+        grid-template-columns 1fr 1fr 1fr
+        .col
+          display flex
+          flex-direction column
+          padding 15px
+          border-left 1px solid rgba(255, 255, 255, 0.2)
+          min-height 150px
+          gap 15px
+          border-right 1px solid rgba(255, 255, 255, 0.2)
+          p
+            font-size 18px
+          span
+            color #EC901C
+            font-size 29px
+            font-weight 500
+      > h2
+        border 1px solid rgba(255, 255, 255, 0.2)
+        border-top none
+        padding 20px
+        margin-bottom 0
+        &:after
+          bottom 10px
+          left 15px
+
   .consultation
     display flex
     width 100%
-    padding 0 20px
+    padding 0 40px
     justify-content center
-    background-color #EC901C
+    margin 15vh 0
+    background: radial-gradient(circle, #fcba2d 0%, #ec901c 75%)
+    // background-color #EC901C
+    max-width 1040px
+    border-radius 10px
     .consultation__wrp
       display flex
       justify-content space-between
-      max-width 1440px
       width 100%
-      padding 50px 0
+      padding 30px 0
+      form
+        background white
+        padding 20px
+        max-width 450px
+        border-radius 10px
+        button
+          color white
+        span
+          color#231f20
       .consultation__text
         display flex
         flex-direction column
         justify-content center
-        max-width 600px
+        max-width 400px
         gap 15px
         h2
           font-weight 500
@@ -154,38 +422,86 @@ $total_animation_time: $time_per_slide * $slides
           letter-spacing 0.01em
           font-variant small-caps
           color #FFFFFF
-      .consultation__button
-        display flex
-        align-items center
-        width 100%
-        max-width 440px 
-        button
-          width 440px
-          background-color white
-          color #EC901C
-          border none
-          border-radius 13px
-          padding 17px 0
-          margin-top 47px
-          text-align center
-          text-transform uppercase
-          font-weight 800
-          font-size 18px
-          line-height 22px
-          cursor pointer
   .company
     display flex
     width 100%
-    padding 0 20px
+    padding 0 40px
     justify-content center
+    border-top 1px solid rgba(255, 255, 255, 0.2)
+    border-bottom 1px solid rgba(255, 255, 255, 0.2)
     .company__wrp
       display flex
       flex-direction column
       justify-content space-between
-      max-width 1440px
+      max-width 1040px
       width 100%
-      padding 50px 0
-      gap 20px
+      border-left 1px solid rgba(255, 255, 255, 0.2)
+      border-right 1px solid rgba(255, 255, 255, 0.2)
+      .company__header
+        padding 20px 15px
+        border-bottom 1px solid rgba(255, 255, 255, 0.2)
+        p
+          font-size 20px
+          font-weight 400
+  .achievements
+    width 100%
+    display flex
+    justify-content center
+    border 1px solid rgba(255, 255, 255, 0.2)
+    border-left none
+    border-right none
+    .achievements__container
+      width 100%
+      max-width 1040px
+      .achievements__block
+        display grid
+        grid-template-columns 1fr 1fr 1fr
+        .col
+          display flex
+          flex-direction column
+          padding 15px
+          border-left 1px solid rgba(255, 255, 255, 0.2)
+          min-height 150px
+          gap 15px
+          border-right 1px solid rgba(255, 255, 255, 0.2)
+          p
+            font-size 18px
+          span
+            color #EC901C
+            font-size 36px
+            font-weight 500
+      > h2
+        border 1px solid rgba(255, 255, 255, 0.2)
+        border-top none
+        padding 20px 20px 20px
+        margin-bottom 0
+        &:after
+          bottom 10px
+          left 15px
+
+  .confidence
+    width 100%
+    display flex
+    justify-content center
+    border-top 1px solid rgba(255, 255, 255, 0.2)
+    border-bottom 1px solid rgba(255, 255, 255, 0.2)
+    .confidence__container
+      width 100%
+      max-width 1040px
+      padding-bottom 30px
+      border-left 1px solid rgba(255, 255, 255, 0.2)
+      border-right 1px solid rgba(255, 255, 255, 0.2)
+      .header-section
+        // border 1px solid rgba(255, 255, 255, 0.2)
+        // border-left none
+        // border-right none
+        padding 20px 20px 0 20px
+        &:after
+          // bottom 10px
+          left 15px
+      p
+        font-size 20px
+        padding 15px 20px 20px 20px
   .documents
     display flex
     width 100%
@@ -195,7 +511,7 @@ $total_animation_time: $time_per_slide * $slides
       display flex
       flex-direction column
       justify-content space-between
-      max-width 1440px
+      max-width 1040px
       width 100%
       padding 50px 0
       gap 20px
@@ -227,6 +543,21 @@ $total_animation_time: $time_per_slide * $slides
           color white
           padding 10px
           font-weight 500
+  footer
+    width: 100%
+    background-color rgba(236, 144, 28, 0.05)
+  .sectionSeparator
+    width 100%
+    display flex
+    justify-content center
+    // border 1px solid rgba(255, 255, 255, 0.2)
+    .separator__container
+      padding 10vh 0
+      width 100%
+      max-width 1040px
+      border-left 1px solid rgba(255, 255, 255, 0.2)
+      border-right 1px solid rgba(255, 255, 255, 0.2)
+
   .backdropModal
     position absolute
     height 100%
@@ -367,6 +698,131 @@ $total_animation_time: $time_per_slide * $slides
             line-height 20px
         .consultation__button
           max-width 320px
+
+@media (max-width: 1024px)
+    .carousel-container
+      height 70vh
+      h1
+        margin-left 5%
+      .slick-arrow
+        &.slick-prev
+          left 0
+        &.slick-next
+          right 0
+    .benefits
+      ul
+        margin 0 30px
+    .products
+      .products__wrp
+        margin 100px 30px 0
+    .sectionSeparator
+      .separator__container
+        padding 7vh 0
+        margin 0 30px
+    .advantages
+      .advantages__container
+        margin 0 30px
+        .advantages__block
+          .col
+            span
+              font-size 27px
+    .achievements
+      .achievements__container
+        margin 0 30px
+        .achievements__block
+          .col
+            span
+              font-size 27px
+            p
+              font-size 16px
+    .confidence
+      .confidence__container
+        width: 95%
+
+
+@media (max-width 700px)
+  .App
+    .carousel-container
+      height 90vh
+      padding-top 130px
+      .slick-arrow
+        display none !important
+      .slick-list
+        margin 0
+      h1
+        font-size 1em
+        line-height 25px
+        margin: 0
+  .App
+    h2
+      &.header-section
+        font-size 28px
+    .products
+      .products__wrp
+        .container-subGroup
+          section
+            flex-direction column !important
+            .column
+              width 100%
+    .advantages
+      .advantages__container
+        margin 0 15px
+        .advantages__block
+          grid-template-columns 1fr
+    .achievements
+      .achievements__container
+        margin 0 15px
+        .achievements__block
+          grid-template-columns 1fr
+    .sectionSeparator
+      .separator__container
+        padding 7vh 0
+        margin 0 15px
+    .confidence
+      padding 0 15px
+    .company
+      padding 0 15px
+      .company__wrp
+        .company__header
+          .header-section
+            font-size 24px
+          > p
+            font-size 16px
+    .products
+      .products__wrp
+        margin 50px 15px 0
+        .header-section
+          padding 15px 10px
+          font-size 24px
+          border-left 1px solid rgba(255, 255, 255, 0.2)
+          border-right 1px solid rgba(255, 255, 255, 0.2)
+          &:after
+            bottom 5px
+            left 10px
+            width 50px
+            height 3px
+        .description-section
+          padding 20px 10px
+          
+          font-weight 400
+          font-size 15px
+          border-left 1px solid rgba(255, 255, 255, 0.2)
+          border-right 1px solid rgba(255, 255, 255, 0.2)
+        .container-subGroup
+          gap 10px
+          border 1px solid rgba(255, 255, 255, 0.2)
+          section
+            padding 20px 10px
+            margin 0
+            .text-box
+              padding 0 15px
+              font-size 16px
+              h4
+                font-size 20px !important
+              p
+                font-weight 400
+                font-size 18px
+// OLD
 @media (max-width: 1000px)
   .App
     .benefits
@@ -411,3 +867,29 @@ $total_animation_time: $time_per_slide * $slides
     .consultation
       .consultation__wrp
         flex-direction column
+
+
+
+#filter-animate-path,
+#circle-animate-path
+  transform-origin top center
+  animation 4s filter infinite ease-in-out
+@keyframes filter
+  0%
+    transform scaleX(-1) translateY(10%)
+  50%
+    transform scaleX(-1) translateY(0)
+  100%
+    transform scaleX(-1) translateY(10%)
+
+#shadow-animate-path,
+#low-shadow-animate-path
+  transform-origin top center
+  animation 4s shadow infinite ease-in-out
+@keyframes shadow
+  0%
+    transform scale(1.16, 1)
+  50%
+    transform scale(1, 1)
+  100%
+    transform scale(1.16, 1)
