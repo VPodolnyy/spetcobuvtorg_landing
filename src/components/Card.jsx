@@ -37,7 +37,9 @@ const Card = ({ product, id }) => {
                   <div className='microImg' key={img} >
                     <img onClick={() => setImage(img)} src={images(`Products/${id}`, img)} alt={img} />
                   </div>
-                )})}
+                )
+              })
+            }
           </div>
           <ImgGlass imgSrc={images(`Products/${id}`, image)} imgId={id} />
         </div>

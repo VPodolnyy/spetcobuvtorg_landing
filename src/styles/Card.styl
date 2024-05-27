@@ -3,22 +3,25 @@
   width 100%
   max-width 1040px
   justify-content space-between
-  padding 40px
-  gap 20px
+  // padding 40px
+  gap 40px
   margin 150px 0
   .leftCol
     .imgBox
       display flex
       flex 1
       gap 10px
+      outline 2px solid rgba(255, 255, 255, 0.1)
       .listImages
         display flex
         flex-direction column
+        gap 10px
         .microImg
           background-color rgba(255, 255, 255, 0.02)
           padding 10px
           // height 20%
           width 80px
+          cursor pointer
           img
             height 100%
             width 100%
@@ -88,5 +91,7 @@
           .microImg
             width 65px
         .img-magnifier-container
+          align-items center
           img
             max-height 400px
+            max-width 260px

@@ -72,7 +72,7 @@ const Catalog = () => {
     } else {
       return <div className="container-group-catalog">
         <section>
-          <div className='column img-box' style={{ backgroundImage: `url(${imagesCompany('pvc-back')}` }}>
+          <div className='column img-box' style={{ backgroundImage: `url(${imgSrc('catalogPvc')}` }}>
           </div>
           <div className='column text-box'>
             <h4>Обувь из поливинилхлорида</h4>
@@ -85,7 +85,7 @@ const Catalog = () => {
            </div>
         </section>
         <section>
-          <div className='column img-box' style={{ backgroundImage: `url(${imagesCompany('pu-back')}` }}>
+          <div className='column img-box' style={{ backgroundImage: `url(${imgSrc('catalogPu')}` }}>
           </div>
           <div className='column text-box'>
             <h4>Обувь из полиуретана</h4>
@@ -98,7 +98,7 @@ const Catalog = () => {
           </div>
         </section>
         <section>
-          <div className='column img-box' style={{ backgroundImage: `url(${imagesCompany('winter-back')}` }}>
+          <div className='column img-box' style={{ backgroundImage: `url(${imgSrc('catalogWinter')}` }}>
           </div>
           <div className='column text-box'>
             <h4>Зимняя обувь</h4>
@@ -129,11 +129,6 @@ export default Catalog
 // Хлебные крошки
 // Кнопка "Назад (в группы, подгруппы, каталог"
 
-const imagesCompany = name => {
-  const img = new URL(`../assets/images/Company/${name}.png`, import.meta.url).href
-  return img || null
-}
-
 const imagesGroup = name => {
   const img = new URL(`../assets/images/Products/Group/${name}.png`, import.meta.url).href
   return img || null
@@ -141,6 +136,11 @@ const imagesGroup = name => {
 
 const imagesModels = name => {
   const img = new URL(`../assets/images/Products/${name}/1.png`, import.meta.url).href
+  return img || null
+}
+
+const imgSrc = name => {
+  const img = new URL(`../assets/images/${name}.webp`, import.meta.url).href
   return img || null
 }
 
