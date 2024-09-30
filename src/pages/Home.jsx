@@ -1,6 +1,7 @@
 import '../styles/App.styl'
 import { useParams, Link } from "react-router-dom"
 import { useEffect, useRef } from 'react'
+import {Helmet} from "react-helmet"
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { GeneralSlider, ConfidenceSlider, CompanySlider } from '../components/Slider'
@@ -46,6 +47,27 @@ function HomePage() {
   })
   return (
     <ThemeProvider theme={theme}>
+    <Helmet>
+      <meta charset="UTF-8" />
+      <meta name="theme-color" content="#48494e"/>
+      <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <meta name="keywords" content="СпецОбувьТорг, Спецобувь, купить спецобувь, спецобувь ботинки, в Москве, специальные ботинки, зимняя спецобувь, сапоги артель"/>
+      <meta name="description" content="Производим специализированную обувь высокого качества. Купить спецобувь от производителя СпецОбувьТорг по лучшей цене. Лучшая специализированная обувь с доставкой по всей России."/>
+      <meta name="yandex-verification" content="53904bc22dd29262" />
+      <title>СпецОбувьТорг</title>
+      <link rel="canonical" href="https://specobuvtorg.ru/"/>
+      <meta property="og:locale" content="ru_RU"/>
+      <meta property="og:type" content="website"/>
+      {/* <meta property="og:title" content="Главная"></meta> */}
+      <meta property="og:url" content="https://specobuvtorg.ru/"/>
+      <meta property="og:site_name" content="СпецОбувьТорг- продажа спецобуви в Москве"/>
+      <meta name="geo.placename" content="Москва"/>
+      <meta name="geo.region" content="Россия"/>
+      {/* <link rel="icon" href="https://domzamkov.com/wp-content/uploads/2021/09/favi-16.png" sizes="32x32"></link> */}
+      {/* <link rel="icon" href="https://domzamkov.com/wp-content/uploads/2021/09/favi-16.png" sizes="192x192"></link> */}
+      {/* <link rel="apple-touch-icon" href="https://domzamkov.com/wp-content/uploads/2021/09/favi-16.png"></link> */}
+    </Helmet>
     <Wrapper>
     <div className='App' id='Home'>
       <div className='carousel-container'>
@@ -54,9 +76,9 @@ function HomePage() {
       </div>
       <div className='benefits'>
         <ul>
-          <li><img src={Production} alt="" /> Собственное производство</li>
-          <li><img src={Guarantees} alt="" /> Гарантии качества</li>
-          <li><img src={Vendor} alt="" /> Надежный поставщик</li>
+          <li><img src={Production} alt="Собственное производство" /> Собственное производство </li>
+          <li><img src={Guarantees} alt="Гарантии качества" /> Гарантии качества</li>
+          <li><img src={Vendor} alt="Надежный поставщик" /> Надежный поставщик</li>
         </ul>
       </div>
       <div className='products' id='Products'>

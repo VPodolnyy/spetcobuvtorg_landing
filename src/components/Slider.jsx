@@ -35,37 +35,37 @@ export const GeneralSlider = () => {
     <Slider {...settings}>
       <Link to="/catalog/pvc/artel" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('artel-back')}` }}></div>
-        <img src={imgSrc('artel')} />
+        <img src={imgSrc('artel')} alt="Артель"/>
         <h5>Артель</h5>
       </Link>
       <Link to="/catalog/pvc/artel-fish" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('artel-fish-back')}` }}></div>
-        <img src={imgSrc('artel-fish')} />
+        <img src={imgSrc('artel-fish')} alt="Рыбацкая Артель"/>
         <h5>Рыбацкая Артель</h5>
       </Link>
       <Link to="/catalog/pu/grafit" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('grafit-back')}` }}></div>
-        <img src={imgSrc('grafit')} />
+        <img src={imgSrc('grafit')} alt="Графит"/>
         <h5>Графит</h5>
       </Link>
       <Link to="/catalog/winter/morozko" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('morozko-back')}` }}></div>
-        <img src={imgSrc('morozko')} />
+        <img src={imgSrc('morozko')} alt="Морозко"/>
         <h5>MOROZKO</h5>
       </Link>
       <Link to="/catalog/pvc/artel-pro" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('artel-pro-back')}` }}></div>
-        <img src={imgSrc('artel-pro')} />
+        <img src={imgSrc('artel-pro')} alt="Артель PRO"/>
         <h5>Артель PRO</h5>
       </Link>
       <Link to="/catalog/winter/artica" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('artica-back')}` }}></div>
-        <img src={imgSrc('artica')} />
+        <img src={imgSrc('artica')} alt="Артика"/>
         <h5>Артика</h5>
       </Link>
       <Link to="/catalog/pvc/artel-fish-pro" className="slide">
         <div className="background" style={{ backgroundImage: `url(${imgSrc('artel-fish-pro-back')}` }}></div>
-        <img src={imgSrc('artel-fish-pro')} />
+        <img src={imgSrc('artel-fish-pro')} alt="Рыбацкая Артель PRO"/>
         <h5>Рыбацкая Артель PRO</h5>
       </Link>
     </Slider>
@@ -102,57 +102,57 @@ export const ConfidenceSlider = () => {
     <Slider {...settings}>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('osnova')} />
+          <img src={imgSrc('osnova')} alt="Группа компаний Основа"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('alrosa')} />
+          <img src={imgSrc('alrosa')} alt="Алроса"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('gazprom-neft')} />
+          <img src={imgSrc('gazprom-neft')} alt="Газпром Нефть"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('rosneft')} />
+          <img src={imgSrc('rosneft')} alt="Роснефть"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('gazprom')} />
+          <img src={imgSrc('gazprom')} alt="Газпром"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('tomskneft')} />
+          <img src={imgSrc('tomskneft')} alt="ТомскНефть"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('slavneft')} />
+          <img src={imgSrc('slavneft')} alt="СлавНефть"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('lukoil')} />
+          <img src={imgSrc('lukoil')} alt="Лукойл"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('sibur')} />
+          <img src={imgSrc('sibur')} alt="Сибур"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('suek')} />
+          <img src={imgSrc('suek')} alt="СУЭК"/>
         </div>
       </div>
       <div className="confidence__item">
         <div className=".confidence__item-img">
-          <img src={imgSrc('bashneft')} />
+          <img src={imgSrc('bashneft')} alt="Башнефть"/>
         </div>
       </div>
     </Slider>
@@ -179,7 +179,6 @@ export const CompanySlider = () => {
   }
 
   return (
-
     <Slider {...settings}>
       <div className="company__item backImg1">
         <div className="company__item-textBox">

@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 // import Wrapper from './components/Wrapper'
 
 import Home from "./pages/Home"
-import Catalog from "./pages/catalog"
+import Catalog from "./pages/Catalog"
+import NotFound from "./pages/NotFound"
 
 
 // import App from './App.jsx'
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     path: "/:block",
     element: <Home />,
   },
+  // {
+  //   path: '/:pathMatch(.*)/*',
+  //   component: NotFound
+  // },
   {
     path: "*",
     element: <Home />,
