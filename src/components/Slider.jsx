@@ -6,6 +6,13 @@ import '../styles/Slider.styl'
 
 import { Link } from "react-router-dom"
 
+const slidesToShow = () => {
+  const screenWidth = window.screen.width
+  if (screenWidth > 1024) return 3
+  else if (screenWidth > 768) return 2
+  else return 1
+}
+
 export const GeneralSlider = () => {
   const settings = {
     dots: false,
@@ -23,12 +30,6 @@ export const GeneralSlider = () => {
     autoplaySpeed: 1000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
-  }
-  function slidesToShow () {
-    const widthScreen = window.innerWidth
-    if (widthScreen > 1024) return 3
-    else if (widthScreen > 768) return 2
-    else return 1
   }
 
   return (
@@ -89,13 +90,6 @@ export const ConfidenceSlider = () => {
     autoplaySpeed: 0,
     nextArrow: <></>,
     prevArrow: <></>
-  }
-  function slidesToShow () {
-    const widthScreen = window.innerWidth
-    if (widthScreen > 700) return 4
-    else if (widthScreen > 600) return 3
-    else if (widthScreen > 500) return 2
-    else return 1
   }
   return (
 

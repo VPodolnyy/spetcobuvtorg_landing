@@ -3,8 +3,14 @@ import '../styles/Contacts.styl'
 
 function Contacts() {
   function computedWidthMaps () {
-    if(window.innerWidth >= 900) return '520px'
-    else return '100%'
+    const screenWidth = window.screen.width
+    if (screenWidth <= 900 ) return (screenWidth - 40) + 'px'
+    else return '500px'
+
+    // if (screenWidth < 584 && screenWidth > 488) return (screenWidth - 40) + 'px'
+    // else if (screenWidth < 488) return (screenWidth - 40) + 'px'
+    // else if (screenWidth >= 900) return '500px'
+    // else return '100%'
     // if(window.innerWidth < 584 && window.innerWidth > 488) return (window.innerWidth - 40) + 'px'
     // if(window.innerWidth < 488) return (window.innerWidth - 40) + 'px'
   }
